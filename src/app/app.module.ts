@@ -1,8 +1,9 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
-import { JsonpComponent } from './jsonp/jsonp.component';
+import {AppComponent} from './app.component';
+import {JsonpComponent} from './jsonp/jsonp.component';
+import {HttpClientJsonpModule, HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -10,10 +11,12 @@ import { JsonpComponent } from './jsonp/jsonp.component';
     JsonpComponent
   ],
   imports: [
-    BrowserModule
-
+    BrowserModule,
+    HttpClientModule,
+    HttpClientJsonpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
